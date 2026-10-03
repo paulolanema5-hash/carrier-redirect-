@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrier Redirect</title>
+  <script>
+  fetch("https://ipinfo.io/json?token=a3aecf4a928ff7") // replace with your token
+  .then(res => res.json())
+  .then(data => {
+      let carrier = (data.org || "").toLowerCase();
+
+      if(carrier.includes("mtn")) {
+          window.location.replace("https://m.bolo2vas94.click/c/n/317010/6500?cid={CLICK_ID}&sc={SOURCE}");
+      } else if(carrier.includes("airtel")) {
+          window.location.replace("https://m.bolo2vas94.click/c/n/317063/6500?cid={CLICK_ID}&sc={SOURCE}");
+      } else if(carrier.includes("glo")) {
+          window.location.replace("https://m.bolo2vas94.click/c/n/315813/6500?cid={CLICK_ID}&sc={SOURCE}");
+      } else {
+          // Fallback: show a manual selection page
+          window.location.replace("https://m.bolo2vas94.click/c/n/317010/6500?cid={CLICK_ID}&sc={SOURCE}");
+      }
+  })
+  .catch(err => {
+      window.location.replace("https://ldl1.com/link?z=10854344&var={SOURCE_ID}&ymid={CLICK_ID}"); // API failed
+  });
+  </script>
+</head>
+<body>
+</body>
+</html>
